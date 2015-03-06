@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Practica 4</title>
+     <!--Bootstrap-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/funciones.js"></script>
+
+
+  </head>
+  <body>
+    <h1>Practica 4</h1>
+    <h1>Practica 4.1</h1>
+    <h1>Practica 4.2</h1>
+    <div class="alert alert-info" id="consola">
+    consola....
+    </div>
+
+ <div class="container text-center">
+
+    <div class="row">
+     <div class="col-md-6">
+     	<img src="img/1.jpg" width="500px" id ="img1">
+
+     </div>
+    	<div class="col-md-6">
+    		
+    		<button id ="btn1" class="btn btn-primary">Imagen1</button>
+    		<button id ="btn2" class="btn btn-primary">Imagen2</button>
+    		<button id ="btn3" class="btn btn-primary">Imagen3</button>
+    	</div>
+
+    </div>
+
+
+    <div class='row'>
+     
+            <div class='col-md-6'>
+            <h1 >Calculadora</h1>
+                      <form name ="calc">
+                        <label for="operador1">Operador 1</label>
+                      	<input type ="number" value="0" name="operador1"id="operador1"
+                      	       class="form-control text-center">
+
+                      	<label for="operador2">Operador 2</label>
+                        <input type ="text" value="2" id="operador2" name="operador2" class="form-control text-center">
+                        <input type="button" value=" + "
+                                 onclick="calcula('+')" 
+                                 class="btn btn-success">
+                         <input type="button" value=" - "
+                                 class="btn btn-inf">
+                         <input type="button" value=" * "
+                                 class="btn btn-default">
+                         <input type="button" value=" / "
+                                 class="btn btn-danger">
+                        <input type ="text" value="" placeholder="resultado" name="resultado" class="form-control text-center">
+                      </form>
+             </div>
+           
+            <div class='col-md-6'>
+              <h1 >Conversiones de Temperatura</h1>
+            <form name ="cover">
+                        <label for="tempe1">Temperatura </label>
+                      	<input type ="texto" value="0" name="tempe1"id="tempe1"
+                      	class="form-control text-center">
+
+                        <input type="button" value="ºC---> ºF"
+                                 onclick="conversionC(this.form)"
+                                 class="btn btn-warning">
+                        <input type="button" value="ºF---> ºC"
+                                 onclick="conversionF(this.form)"
+                                 class="btn btn-danger">
+                        <input type ="text" value="" placeholder="resultado" name="c" class="form-control text-center">
+                      </form>
+             </div>   
+             </div>
+
+    <div class='row'>
+           
+            <div class='col-md-6'>
+             <h1 >Conversiones de Tiempo</h1>
+            <form name ="tiemp">
+                        <label for="tiempo">Tiempo </label>
+                      	<input type ="number" value="0" name="tiempo"id="tiempo"
+                      	class="form-control text-center">
+
+                        <input type="button" value="Hrs-->Min"
+                                 onclick="TiempoH('60','*')" 
+                                 class="btn btn-primary">
+
+                        <input type="button" value="Min-->Seg"
+                                 onclick="TiempoM('60','*')" 
+                                 class="btn btn-success">
+
+                        <input type="button" value="Hrs--->Seg"
+                                 onclick="TiempoS('3600','*')" 
+                                 class="btn btn-warning">
+
+                        <input type ="text" value="" placeholder="resultado" name="resultado" class="form-control text-center">
+                      </form>
+            </div>
+         
+            <div class='col-md-6'>
+               <h1 >Conversiones de Peso</h1>
+            <form name ="peso">
+                        <label for="peso1">Peso </label>
+                      	<input type ="number" value="0" name="peso1"id="peso1"
+                      	class="form-control text-center">
+
+                        <input type="button" value="Kg-->g"
+                                 onclick="PesoG('1000','*')" 
+                                 class="btn btn-info">
+
+                        <input type="button" value="Kg-->mg"
+                                 onclick="PesoMG('1000000','*')"
+                                 class="btn btn-success">
+
+                        <input type="button" value="Kg--->lb"
+                                 onclick="PesoLB('2.2','*')" 
+                                 class="btn btn-danger">
+
+                        <input type ="text" value="" placeholder="resultado" name="resultado" class="form-control text-center">
+                      </form>
+
+            </div>
+            </div>
+    </div>
+
+  </body>
+</html>
+	

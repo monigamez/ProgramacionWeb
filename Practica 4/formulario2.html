@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Practica 4</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+   <!-- <link rel="stylesheet" type="text/css" href="css/miestilo.css">-->
+
+  </head>
+  <body>
+    <h1>Practica 4</h1>
+
+    <div class="container text-center">
+     <div class='row'>
+            <div class='col-md-12'>
+                <form  class="form-horizontal" method="GET" action="formulario2.html" >
+                      <div class="form-group">
+                      <label for="email" class="col-sm-6 control-label">Fill out all the fields below to Register!*</label>
+                     </div>
+                     <div class="form-group" >
+                             <label for="email" class="col-sm-4 control-label" >E-mail:</label>
+                             <div class="col-sm-2">
+               	                 <input class="form-control" type="email" name="email" id="email"  required>
+                             </div> 
+                             <div class="col-sm-2">
+                                  <a href="http://ladireccionquequieras poner" >Privacy policy</a>
+                             </div>
+                     </div>
+                     <div class="form-group" >
+                             <label for="email2" class="col-sm-4 control-label" >Confirm E-mail:</label>
+                             <div class="col-sm-2">
+                                 <input class="form-control" type="email" name="email2" id="email2"  required> 
+                             </div>
+                     </div>
+
+                    <div class="form-group" style="position:left">
+                     <div class="radio">
+                         <label  class="col-sm-4 control-label">Sex:</label>
+                         <div class="col-sm-2">
+                         <label>
+                        	<input type="radio" name="genero" id="genero">
+                        	 Mujer
+                         </label>
+                        <label>
+                        	 <input type="radio" name="genero" id="genero">
+                        	 Hombre
+                        </label>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                         <label for="cumple" class="col-sm-4 control-label">Year of Birth:</label>
+                          <div class="col-sm-2">
+                         <input 
+                          <class="form-control" type="date" name="cumple" id="cumple" required>
+                          </div> 
+                    </div>
+
+                    <div class="form-group">
+                         <label for="codigoP" class="col-sm-4 control-label">ZIP/Postal Code:</label>
+                          <div class="col-sm-2">
+                         <input 
+                         <class="form-control" type="text" name="codigoP" id="codigoP" required>
+                         <p class="help-block" >   (e.g. 98104)  </p>
+                         </div>
+                    </div>
+
+                     <div class="form-group">
+                         <label for="country" class="col-sm-4 control-label">Country:</label>
+                          <div class="col-sm-4">
+                      	  <select class="form-control" name="country" type="country" id="country" placeholder="Select country" required>
+                      	     <option>(select country)</option>
+                      	 	 <option>Guanajuato</option>
+                      	 	 <option>Guerrero</option>
+                      	 	 <option>Jalisco</option>
+                      	 </select>
+                      	 </div>
+                     </div>
+
+                     <div class="form-group">
+                         <label for="password" class="col-sm-4 control-label">Select a password</label>
+                         <div class="col-sm-2">
+                         <input class="form-control" type="password" name="password" id="password" required>
+                          <p class="help-block" >(four character minimum )</p> 
+                          </div>
+                    </div>
+
+                    <div class="form-group">
+                         <label for="passwordC" class="col-sm-4 control-label">Confirm password</label>
+                          <div class="col-sm-2">
+                         <input 
+                          <class="form-control" type="password" name="passwordC" id="passwordC" required>
+                          </div>
+                    </div>
+
+                    <div class="form-group" >
+                          <label for="ZIP" class="col-sm-4 control-label"></label>
+                         <input class="btn btn-primary btn-lg" type="submit" value="REGISTER!">
+                    </div>
+            
+                 </form>
+             </div>	
+              <div class="col-md-6">
+        
+              </div>	
+
+
+		</div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  </body>
+</html>
