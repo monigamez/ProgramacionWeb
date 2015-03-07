@@ -1,127 +1,66 @@
  
-//alert("hola javascrip");
-//funciones implicitas
 
 $(document).ready(function (){
 
-//alert("hola desde jquery");
- 
-
- $('h1').hide('slow');
- $('h1').show('fast');//se le puede  poner fast-slow 
+ $('h2').hide('slow');
+ $('h2').css('fontSize','70px');
+ $('h2').show('fast');//se le puede  poner fast-slow 
 
 
- $('h1').click(function(){
+ $('h2').click(function(){
     $(this).hide('slow');
     $('#consola').html($(this).css('fontSize'));
 
     if($(this).css('fontSize')=='50px'){//primer seleccionar propiedades, asignarle un nuevo valor
-    	 $(this).css('fontSize','32px');
-    	}else{
+       $(this).css('fontSize','32px');
+      }else{
           $(this).css('fontSize','50px');
-    	}
+      }
     $(this).show('fast');
  });
 
-$('#btn2').click(function(){
-	$('#img1').attr('src','img/2.jpg');
-
-
-});
-$('#btn3').click(function(){
-	$('#img1').attr('src','img/3.jpg');
-
 
 });
 
-$('#btn1').click(function(){
-	$('#img1').attr('src','img/1.jpg');
-	$('#img1').animate({
-
-		opacity:0.25,
-		width:"25",
-		left:"50",
-		height:"30"
-	}, 5000, function(){
-	});
-
-});
-
-});
-
-/*
-
- function calcula(operacion){
-           var operador1 = document.calc.operador1.value;
-           var operador2 = document.getElementById("operador2").value;
-           // alert(operador1);
-           // alert(operador2);
-            var resul= eval(operador1 + operacion + operador2);
-            document.calc.resultado.value=resul
-        }
-
-        //otras funciones
-         function conversionC (form)
-        {
-         form.c.value= form.tempe1.value*1.8+32
-        }
-        function conversionF (form)
-        {
-          form.c.value = (form.tempe1.value-32)/1.8 
-        }
-
-        function  TiempoH (valor,ope)
-        {
-           var operador1 = document.tiemp.tiempo.value;
-            alert(operador1);
-
-            var resul= eval(operador1 + ope + valor);
-            document.tiemp.resultado.value=resul
-        }
-
-        function  TiempoM (valor,ope)
-        {
-           var operador1 = document.tiemp.tiempo.value;
-            alert(operador1);
-
-            var resul= eval(operador1 + ope + valor);
-            document.tiemp.resultado.value=resul
-        }
-
-        function  TiempoS (valor,ope)
-        {
-           var operador1 = document.tiemp.tiempo.value;
-            alert(operador1);
-
-            var resul= eval(operador1 + ope + valor);
-            document.tiemp.resultado.value=resul
-        }
-
-        function  PesoG (valor,ope)
-        {
-           var operador1 = document.peso.peso1.value;
-            alert(operador1);
-
-            var resul= eval(operador1 + ope + valor);
-            document.peso.resultado.value=resul
-        }
-        function  PesoMG (valor,ope)
-        {
-           var operador1 = document.peso.peso1.value;
-            alert(operador1);
-
-            var resul= eval(operador1 + ope + valor);
-            document.peso.resultado.value=resul
-        }
-
-         function  PesoLB (valor,ope)
-        {
-            var operador1 = document.peso.peso1.value;
+ 
+function financiamiento(){
+           var monto = document.finan.monto.value;
+           var meses = document.finan.meses.value;
+           var valorTotal;
+           var RI;
+           var PagoM;
+           
       
-            alert(operador1);
+         if((meses>=1 )&& (meses<=3))
+         {
+          
+            RI= (monto* 0.01);
+            valorTotal=(parseInt(monto)+parseFloat(RI));
+            PagoM=parseFloat(valorTotal)/parseInt(meses);
+         
+         }else
+             if((meses>=4) &&( meses<=7))
+            {
+               RI= (monto* 0.02);
+               valorTotal=(parseInt(monto)+parseFloat(RI));
+               PagoM=parseFloat(valorTotal)/parseInt(meses);
+                 
+             }
+             else
+               if(meses>=8)
+               {
+                 RI= (monto*0.03);
+                 valorTotal=(parseInt(monto)+parseFloat(RI));
+                  PagoM=parseFloat(valorTotal)/parseInt(meses);
+                
+               }
+           document.finan1.monto1.value=monto   
+           document.finan1.TP.value=valorTotal;
+           document.finan1.PM.value=PagoM
 
-            var resul= eval(operador1 + ope + valor);
-            document.peso.resultado.value=resul
         }
-    
-    */   
+
+
+
+
+     
